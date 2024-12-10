@@ -279,6 +279,22 @@ sheet['H1'] = 'Thứ 7'
 mau_xanh = PatternFill(start_color="00ADD8E6", end_color="00ADD8E6", fill_type="solid")  # Xanh lục lam
 mau_vang = PatternFill(start_color="00FFFF00", end_color="00FFFF00", fill_type="solid")  # Vàng
 
+red = PatternFill(start_color="f52c2c", end_color="f52c2c", fill_type='solid')  # Đỏ
+orange = PatternFill(start_color="ff8400", end_color="ff8400", fill_type='solid')  # Cam
+yellow = PatternFill(start_color="fae505", end_color="fae505", fill_type='solid')  # Vàng
+green = PatternFill(start_color="6fff00", end_color="6fff00", fill_type='solid')  # Xanh lá
+blue = PatternFill(start_color="0559f5", end_color="0559f5", fill_type='solid')  # Xanh dương
+purple = PatternFill(start_color="7905f5", end_color="7905f5", fill_type='solid')  # Tím
+
+
+sheet['C1'].fill = red
+sheet['D1'].fill = orange
+sheet['E1'].fill = yellow
+sheet['F1'].fill = green
+sheet['G1'].fill = blue
+sheet['H1'].fill = purple
+
+
 o_mau_xanh = ['A1', 'A3', 'A4', 'A6', 'A7', 'A8', 'A10', 'A11', 'A13', 'A14']
 o_mau_vang = ['A2', 'A5', 'A9', 'A12']
 
@@ -307,6 +323,8 @@ for row in sheet.iter_rows(min_col=1, max_col=8):
   
 for col in range(ord('C'), ord('H') + 1):
     sheet.column_dimensions[chr(col)].width = 26
+for row in range(1,15):
+    sheet.row_dimensions[row].height = 25
 sheet.column_dimensions['B'].width = 15
 wb_moi.save(file_moi)
 print("It's done you lazy bitch")
