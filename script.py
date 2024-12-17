@@ -276,7 +276,7 @@ sheet['F1'] = 'Thứ 5'
 sheet['G1'] = 'Thứ 6'
 sheet['H1'] = 'Thứ 7'
 
-mau_xanh = PatternFill(start_color="00ADD8E6", end_color="00ADD8E6", fill_type="solid")  # Xanh lục lam
+mau_xanh = PatternFill(start_color="42e3f5", end_color="42e3f5", fill_type="solid")  # Xanh lục lam
 mau_vang = PatternFill(start_color="00FFFF00", end_color="00FFFF00", fill_type="solid")  # Vàng
 
 red = PatternFill(start_color="f52c2c", end_color="f52c2c", fill_type='solid')  # Đỏ
@@ -322,7 +322,7 @@ for row in sheet.iter_rows(min_col=1, max_col=8):
         cell.font = font_bold 
   
 for col in range(ord('C'), ord('H') + 1):
-    sheet.column_dimensions[chr(col)].width = 26
+    sheet.column_dimensions[chr(col)].width = 30
 for row in range(1,15):
     sheet.row_dimensions[row].height = 25
 sheet.column_dimensions['B'].width = 15
