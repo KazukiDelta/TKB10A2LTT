@@ -1,4 +1,6 @@
 # TKB10A2LTT
+cmd:
+pip install openpyxl
 
 Đưa file tkb của trường chuyên Lý Tự Trọng vào chung folder.
 
